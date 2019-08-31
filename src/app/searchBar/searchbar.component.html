@@ -1,10 +1,14 @@
-<div class="ui segment">
-    <div class="field">
-      <label>Youtube Video Search</label>
-      <div class="ui input">
-        <input #searchTerm type="text" value="Kurzgesagt" />
-        <button (click)="onFormSubmit()" class="right attached mini ui button"><i
-            class="search icon"></i>Search</button>
+
+
+<nav>  
+  <div class="nav-wrapper">
+    <form #f="ngForm" (ngSubmit)="onFormSubmit(f)">
+      <div class="input-field">
+        <input name="searchTerm" ngModel type="search" required>
+        <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+        <i class="material-icons">close</i>
       </div>
-    </div>
-</div>
+    </form>
+  </div>
+</nav>
+

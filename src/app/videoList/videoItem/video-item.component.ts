@@ -11,9 +11,11 @@ export class VideoItemComponent implements OnChanges {
 @Output() selectedVideo = new EventEmitter<void>();
     title: string;
     thumbnail: string;
+    description: string;
     ngOnChanges(changes: SimpleChanges): void {
         if (changes.videoItem) {
             this.title = this.videoItem.snippet.title;
+            this.description = this.videoItem.snippet.description;
             this.thumbnail = this.videoItem.snippet.thumbnails.high.url;
         }
     }

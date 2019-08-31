@@ -1,14 +1,35 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div class='ui container' style="margin-top: 10px">
+<div class='ui container' style="margin-top: 15px">
+  <h3 class="ui header">
+    <i class="youtube icon" style="color:red"></i>
+    <div class="content">
+      Youtube Search
+    </div>
+  </h3>
   <app-search-bar (search)="onTermSubmit($event)"></app-search-bar>
-  <div class='ui grid'>
-    <h3 *ngIf="isLoadingApiCall" style="margin-top: 50px">Loading...</h3>
-    <div class='ui row' style="margin-top: 10px">
-      <div *ngIf="selectedVideo" class='eleven wide column'>
-        <app-video-details [video]="selectedVideo"></app-video-details>
+  <div class='ui centered grid'>
+    <div *ngIf="isLoadingApiCall">
+      <h3 style="margin-top: 50px">Loading...</h3>
+      <div class="progress">
+        <div class="indeterminate"></div>
       </div>
-      <div *ngIf="apiVideoList" class='five wide column'>
-        <app-video-list (selectedVideoParent)="showSelectedVideo($event)" [videoList]="apiVideoList"></app-video-list>
+    </div>
+    
+    <div class='ui row' style="margin-top: 10px">
+      <div *ngIf="selectedVideo" class='sixteen wide column'>
+        <app-video-details [video]="selectedVideo"></app-video-details>
+      </div>         
+    </div>   
+    
+    <div class="ui horizontal divider" style="background-color: transparent; overflow: visible">
+      Results
+    </div>
+
+    <div class='ui row'>
+      <div *ngIf="apiVideoList" class='sixteen wide column'>
+        <div class="ui container" style="text-align: center">
+          <app-video-list (selectedVideoParent)="showSelectedVideo($event)" [videoList]="apiVideoList"></app-video-list>
+        </div>
       </div>
     </div>
   </div>

@@ -13,10 +13,10 @@ export class YoutubeService {
    getVideosSearch(term: string) {
    // let apiVideoList;
    try {
-     const maxResults = 5;
+     const maxResults = 6;
      const apiKey = 'AIzaSyB6gTUpgBcFVKQZlTaZvU8UgAkkyOniwJs';
      const url = 'https://www.googleapis.com/youtube/v3/search?key='
-       + apiKey + '&q=' + term + '&order=date&part=snippet&type=video&maxResults=' + maxResults;
+       + apiKey + '&q=' + term + '&part=snippet&type=video&maxResults=' + maxResults;
 
      // tslint:disable-next-line: max-line-length
      // the map operator allows us to get some data an return new one, automatically re-wrapped in an Observable so we can still subscribe to it

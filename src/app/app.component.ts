@@ -22,7 +22,6 @@ export class AppComponent implements OnInit {
   }
 
     async onTermSubmit(term: string) {
-     console.log(this.isLoadingApiCall);
     // Using our service to call youtube api with the search term
      const videos = await this.youTubeService.getVideosSearch(term);
         // Knowing the structure of the Youtube search API response we can parse to JSON and access the list of videos

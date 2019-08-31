@@ -1,7 +1,7 @@
-<div *ngIf="videoList" class='ui relaxed divided list'>
-  <hr>
-  <app-video-item  *ngFor="let video of videoList" [videoItem]="video"
-    (selectedVideo)="videoItemSelected(video)">
-  </app-video-item>
-  
+
+<div *ngIf="videoList" class="doubling stackable three column ui grid container" style="display: inline-block">
+  <div class="column" *ngFor="let video of videoList">
+    <app-video-item [videoItem]="video" (selectedVideo)="videoItemSelected(video)">
+    </app-video-item>
+  </div>
 </div>

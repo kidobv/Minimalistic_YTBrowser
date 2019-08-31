@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { SearchBarComponent} from './searchBar/searchbar.component';
@@ -10,6 +11,7 @@ import { VideoDetailsComponent } from './videoDetails/video-details.component';
 import { VideoListComponent } from './videoList/video-list.component';
 import { VideoItemComponent } from './videoList/videoItem/video-item.component';
 import { SafePipe } from './shared/safe.pipe';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { SafePipe } from './shared/safe.pipe';
   imports: [
     BrowserModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [YoutubeService],
   bootstrap: [AppComponent]
