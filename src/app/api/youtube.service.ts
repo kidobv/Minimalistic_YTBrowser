@@ -14,7 +14,7 @@ export class YoutubeService {
    // let apiVideoList;
    try {
      const maxResults = 6;
-     const apiKey = 'AIzaSyB6gTUpgBcFVKQZlTaZvU8UgAkkyOniwJs';
+     const apiKey = 'AIzaSyCbO-eE6rputww7OMDr1_rxkw2Ue30g2eI';
      const url = 'https://www.googleapis.com/youtube/v3/search?key='
        + apiKey + '&q=' + term + '&part=snippet&type=video&maxResults=' + maxResults;
 

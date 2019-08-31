@@ -20,7 +20,6 @@
     "@angular/platform-browser-dynamic": "~7.2.0",
     "@angular/router": "~7.2.0",
     "core-js": "^2.5.4",
-    "materialize-css": "^1.0.0-rc.2",
     "ngx-spinner": "^8.0.3",
     "rxjs": "~6.3.3",
     "sweetalert2": "^8.16.4",

@@ -21,6 +21,10 @@ export class VideoItemComponent implements OnChanges {
     }
 
     onVideoSelected() {
+        console.log(document.getElementById('player'));
+        document.getElementById('player').scrollIntoView({
+            behavior: 'smooth'
+        });
         this.selectedVideo.emit();
     }
 }
