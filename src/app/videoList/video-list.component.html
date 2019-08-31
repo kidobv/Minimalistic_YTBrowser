@@ -1,0 +1,7 @@
+<div *ngIf="videoList" class='ui relaxed divided list'>
+  <hr>
+  <app-video-item  *ngFor="let video of videoList" [videoItem]="video"
+    (selectedVideo)="videoItemSelected(video)">
+  </app-video-item>
+  
+</div>
