@@ -102,7 +102,7 @@ var YoutubeService = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<div class='ui container' style=\"margin-top: 15px\">\n  <h3 class=\"ui header\">\n    <i class=\"youtube icon\" style=\"color:red\"></i>\n    <div class=\"content\">\n      Youtube Search\n    </div>\n  </h3>\n  <app-search-bar (search)=\"onTermSubmit($event)\"></app-search-bar>\n  <div class='ui centered grid'>\n    <div *ngIf=\"isLoadingApiCall\">\n      <h3 style=\"margin-top: 50px\">Loading...</h3>\n      <div class=\"progress\">\n        <div class=\"indeterminate\"></div>\n      </div>\n    </div>\n    \n    <div class='ui row' style=\"margin-top: 10px\">\n      <div *ngIf=\"selectedVideo\" class='sixteen wide column'>\n        <app-video-details [video]=\"selectedVideo\"></app-video-details>\n      </div>         \n    </div>   \n    \n    <div class=\"ui horizontal divider\" style=\"background-color: transparent; overflow: visible\">\n      Results\n    </div>\n\n    <div class='ui row'>\n      <div *ngIf=\"apiVideoList\" class='sixteen wide column'>\n        <div class=\"ui container\" style=\"text-align: center\">\n          <app-video-list (selectedVideoParent)=\"showSelectedVideo($event)\" [videoList]=\"apiVideoList\"></app-video-list>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n\n\n"
+module.exports = "<!--The content below is only a placeholder and can be replaced.-->\r\n<div class='ui container' style=\"margin-top: 15px\">\r\n  <h3 class=\"ui header\">\r\n    <i class=\"youtube icon\" style=\"color:red\"></i>\r\n    <div class=\"content\">\r\n      Youtube Search\r\n    </div>\r\n  </h3>\r\n  <app-search-bar (search)=\"onTermSubmit($event)\"></app-search-bar>\r\n  <div class='ui centered grid'>\r\n    <div *ngIf=\"isLoadingApiCall\">\r\n      <h3 style=\"margin-top: 50px\">Loading...</h3>\r\n      <div class=\"progress\">\r\n        <div class=\"indeterminate\"></div>\r\n      </div>\r\n    </div>\r\n    \r\n    <div class='ui row' style=\"margin-top: 10px\">\r\n      <div *ngIf=\"selectedVideo\" class='sixteen wide column'>\r\n        <app-video-details [video]=\"selectedVideo\"></app-video-details>\r\n      </div>         \r\n    </div>   \r\n    \r\n    <div class=\"ui horizontal divider\" style=\"background-color: transparent; overflow: visible\">\r\n      Results\r\n    </div>\r\n\r\n    <div class='ui row'>\r\n      <div *ngIf=\"apiVideoList\" class='sixteen wide column'>\r\n        <div class=\"ui container\" style=\"text-align: center\">\r\n          <app-video-list (selectedVideoParent)=\"showSelectedVideo($event)\" [videoList]=\"apiVideoList\"></app-video-list>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n\r\n\r\n"
 
 /***/ }),
 
@@ -358,7 +358,7 @@ var Video = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\r\n  <div id='player' class='ui embed'>\r\n    <iframe title='video player' [src]=\"videoSrc|safe\"></iframe>\r\n  </div>\r\n  <div class='ui segment'>\r\n    <h4 class='ui header'>{{video.title}}</h4>\r\n    <p>{{video.description}}</p>\r\n  </div>\r\n</div>"
+module.exports = "<div>\r\n  <div id='player' class='ui embed'>\r\n    <iframe title='video player' [src]=\"videoSrc|safe\" allowfullscreen></iframe>\r\n  </div>\r\n  <div class='ui segment'>\r\n    <h4 class='ui header'>{{video.title}}</h4>\r\n    <p>{{video.description}}</p>\r\n  </div>\r\n</div>"
 
 /***/ }),
 
@@ -610,7 +610,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Kido\Documents\Study Folder\Angular\YTBrowser\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Users\Kido\Documents\Study Folder\Angular\Minimalistic_YTBrowser\src\main.ts */"./src/main.ts");
 
 
 /***/ })
