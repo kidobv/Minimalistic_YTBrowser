@@ -19,9 +19,9 @@ export class YoutubeService {
        + apiKey + '&q=' + term + '&part=snippet&type=video&maxResults=' + maxResults;
 
      // tslint:disable-next-line: max-line-length
-     // the map operator allows us to get some data an return new one, automatically re-wrapped in an Observable so we can still subscribe to it
-     const res = this.http.get(url).pipe(map(response => response)).toPromise();
-     return res;
+     // We need to convert the Observable from the API call to a Promise so that we can use the await keyword in order to wait for the Promise to be resolved
+     return this.http.get(url).pipe(map(response => response)).toPromise();
+     
     // We can use pipe(map()) to manipulate the response data and use Type control
     } catch { // default error
       return {
